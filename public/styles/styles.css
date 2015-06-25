@@ -1,2 +1,195 @@
-body h1 {
-  background-color: #fff; }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-image: url("../assets/bg.jpg"); }
+
+header {
+  background-image: url("../assets/header_bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #EEE;
+  position: relative; }
+  @media only screen and (max-width: 599px) {
+    header {
+      background-image: none; } }
+  header #addButton {
+    background-color: #EEE;
+    border: solid 2px orange;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 35px;
+    color: red;
+    padding: 0;
+    margin: 0; }
+    header #addButton > span {
+      line-height: 20px;
+      text-align: center;
+      display: block;
+      width: 27px;
+      height: 27px;
+      margin: auto;
+      padding: 0;
+      margin: 0; }
+    header #addButton:hover {
+      background-color: orange;
+      color: white; }
+  header div {
+    width: 120px;
+    margin: auto; }
+
+nav {
+  height: 45px;
+  background-color: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px;
+  text-transform: uppercase; }
+  nav ul {
+    max-width: 255px;
+    margin: auto;
+    list-style-type: bullet;
+    padding: 13px; }
+    @media only screen and (max-width: 599px) {
+      nav ul {
+        list-style-type: none;
+        width: 100%;
+        padding: 0px; } }
+  nav li {
+    display: inline-block;
+    color: #EEE; }
+    nav li:hover {
+      color: orange; }
+    nav li:first-child:before {
+      display: none; }
+    nav li:before {
+      content: " ";
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      background-color: #888;
+      position: relative;
+      margin-right: 7px;
+      border-radius: 100%;
+      box-sizing: border-box;
+      top: -5px; }
+    @media only screen and (max-width: 599px) {
+      nav li {
+        list-style-type: none;
+        width: 33%; } }
+    @media only screen and (max-width: 599px) {
+      nav li #middle {
+        border: solid 1px white; } }
+
+.main {
+  background-image: url("../assets/bg.jpg"); }
+
+.articles ul.containerList {
+  max-width: 710px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+.articles div.inBlockDiv {
+  padding: 20px; }
+.articles li.contentBlock {
+  background-color: #EEE;
+  display: inline-block;
+  width: 323px;
+  height: 400px;
+  margin: 10px 10px 10px 10px;
+  border: solid 5px transparent; }
+  .articles li.contentBlock:hover {
+    border: solid 5px orange; }
+    .articles li.contentBlock:hover h2 {
+      color: orange; }
+  .articles li.contentBlock h2 {
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    color: black; }
+  .articles li.contentBlock a {
+    text-decoration: none; }
+  .articles li.contentBlock div {
+    max-width: 277px;
+    margin: auto; }
+  .articles li.contentBlock ul.articleData {
+    margin-top: 5px; }
+    .articles li.contentBlock ul.articleData li {
+      display: inline-block;
+      color: gray;
+      font-family: 'Lato', sans-serif; }
+      .articles li.contentBlock ul.articleData li:first-child:before {
+        display: none; }
+      .articles li.contentBlock ul.articleData li:before {
+        content: " ";
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        background-color: #888;
+        position: relative;
+        margin-right: 5px;
+        border-radius: 100%;
+        box-sizing: border-box;
+        top: -2px; }
+  .articles li.contentBlock p.articleContent {
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif; }
+
+footer {
+  height: 50px;
+  background-color: black; }
+  @media only screen and (min-width: 600px) and (max-width: 899px) {
+    footer {
+      display: none; } }
+  @media only screen and (max-width: 599px) {
+    footer {
+      display: none; } }
+  footer ul {
+    width: 60px;
+    height: 25px;
+    margin: auto;
+    padding-top: 10px; }
+    footer ul #instagram {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url("../assets/instagram_grey.svg"); }
+      footer ul #instagram:hover {
+        background-image: url("../assets/instagram_orange.svg"); }
+    footer ul #facebook {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url("../assets/facebook_grey.svg"); }
