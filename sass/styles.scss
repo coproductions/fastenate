@@ -31,8 +31,6 @@ header {
 
   #logo{
     @media #{$small}{
-      // position: absolute;
-      // left: 10px;
     }
   }
 
@@ -89,6 +87,7 @@ nav {
   font-size: 17px;
   text-transform: uppercase;
 
+
   ul {
     max-width: 255px;
     margin: auto;
@@ -96,6 +95,7 @@ nav {
     padding: 13px;
 
      @media #{$small}{
+      margin: 0,0,0,0;
       list-style-type: none;
       width: 100%;
       padding: 0px;
@@ -130,8 +130,9 @@ nav {
     }
 
      @media #{$small}{
+      padding: 0;
       list-style-type: none;
-       width: 33%;
+       width: 29%;
      }
 
      #middle{
@@ -151,15 +152,17 @@ nav {
 }
 
 .articles {
+  text-align: center;
 
   // margin-top: 20px;
 
   ul.containerList {
     // background-color: teal;
-    max-width: 710px;
-    margin: auto;
+    // max-width: 710px;
+    // margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+
   }
 
   div.inBlockDiv {
@@ -182,6 +185,8 @@ nav {
         color : $highlight;
       }
     }
+
+    // @media #
 
     h2{
         margin-top: 20px;
@@ -278,5 +283,40 @@ footer{
       background-image: url("../assets/facebook_grey.svg");
     }
   }
+
+}
+
+
+@media #{$small}{
+
+  nav{
+    padding: 0;
+    li{
+       &:before{
+        display: none;
+      }
+
+    }
+  }
+
+
+
+  .articles{
+
+      li.contentBlock{
+        background-color: $light;
+        display: inline-block;
+        width: 323px;
+        height: 400px;
+        margin: 10px 0px 10px 0px;
+        border: solid 5px transparent;
+
+        #middle{
+          color: pink;
+          background-color: pink;
+          border: solid white 1px;
+        }
+      }
+    }
 
 }
